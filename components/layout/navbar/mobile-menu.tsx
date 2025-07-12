@@ -76,11 +76,60 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                     <Search />
                   </Suspense>
                 </div>
+                
+                {/* Main Navigation Items */}
+                <ul className="flex w-full flex-col mb-6">
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/" prefetch={true} onClick={closeMobileMenu}>
+                      Home
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/blog" prefetch={true} onClick={closeMobileMenu}>
+                      Blog
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/contact" prefetch={true} onClick={closeMobileMenu}>
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/events" prefetch={true} onClick={closeMobileMenu}>
+                      Events
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/pre-order" prefetch={true} onClick={closeMobileMenu}>
+                      Pre-order
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/track-shipment" prefetch={true} onClick={closeMobileMenu}>
+                      Track Shipment
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/login" prefetch={true} onClick={closeMobileMenu}>
+                      Login
+                    </Link>
+                  </li>
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/wishlist" prefetch={true} onClick={closeMobileMenu}>
+                      Wishlist
+                    </Link>
+                  </li>
+                </ul>
+
+                {/* Shopify Menu Items */}
                 {menu.length ? (
                   <ul className="flex w-full flex-col">
+                    <li className="py-2 text-sm text-gray-500 uppercase tracking-wide font-medium">
+                      Categories
+                    </li>
                     {menu.map((item: Menu) => (
                       <li
-                        className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                        className="py-2 text-lg text-black transition-colors hover:text-neutral-500 dark:text-white"
                         key={item.title}
                       >
                         <Link href={item.path} prefetch={true} onClick={closeMobileMenu}>

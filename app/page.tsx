@@ -15,12 +15,6 @@ export default function HomePage() {
     <>
       <ThreeItemGrid />
       <Carousel />
-      <button className="btn-primary">Primary</button>
-<button className="btn-cta">Call to Action</button>
-<button className="btn-secondary">Secondary</button>
-<button className="btn-accent">Accent</button>
-<button className="btn-muted">Muted</button>
-
       <Footer />
     </>
   );
